@@ -98,7 +98,7 @@
             
               <li class="archive-list-container">
                 <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">4</span></li></ul>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">5</span></li></ul>
               </li>
             
           
@@ -162,6 +162,146 @@
           <h1><a href="/archives/2020" class="archive-year">2020</a></h1>
         </div>
         <div class="post-list">
+    
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2020/02/16/Git&Github/" >
+  Git&amp;Github
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2020/02/16/Git&Github/"><span class="article-date">
+  2020-02-16
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-entry">
+        
+          <blockquote>
+<p><strong>Talk is cheap,show me the code</strong>                                                                     Linus Benedict Torvalds</p>
+</blockquote>
+<h2 id="1-Git-的基本介绍"><a href="#1-Git-的基本介绍" class="headerlink" title="1.Git 的基本介绍"></a>1.Git 的基本介绍</h2><h4 id="1-Git"><a href="#1-Git" class="headerlink" title="(1)Git"></a>(1)Git</h4><p>​    Git是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件</p>
+<h4 id="2-版本控制应具备的功能"><a href="#2-版本控制应具备的功能" class="headerlink" title="(2)版本控制应具备的功能"></a>(2)版本控制应具备的功能</h4><ul>
+<li><p>协同修改</p>
+</li>
+<li><p>数据备份</p>
+</li>
+<li><p>版本管理（不保存重复数据）</p>
+</li>
+<li><p>权限控制</p>
+</li>
+<li><p>历史记录</p>
+</li>
+<li><p>分支管理</p>
+</li>
+</ul>
+<h4 id="3-版本控制简介"><a href="#3-版本控制简介" class="headerlink" title="(3)版本控制简介"></a>(3)版本控制简介</h4><p>​        集中式版本控制工具 SVN （存在单点故障的风险）</p>
+<p>​        分布式版本控制工具Git</p>
+<h4 id="4-Git的优势"><a href="#4-Git的优势" class="headerlink" title="(4)Git的优势"></a>(4)Git的优势</h4><p>​        大部分在本地完成，不需要联网</p>
+<p>​        完整性保证</p>
+<p>​        尽可能添加数据而不是删除或修改数据</p>
+<p>​        分支操作非常的流畅快捷</p>
+<p>​        与Linux命令全面兼容</p>
+<h2 id="2-Git-的本地结构"><a href="#2-Git-的本地结构" class="headerlink" title="2.Git 的本地结构"></a>2.Git 的本地结构</h2><p><img src="/images/20200216_git01.png" alt="git01"></p>
+<h2 id="3-Git和代码托管中心，维护远程库"><a href="#3-Git和代码托管中心，维护远程库" class="headerlink" title="3.Git和代码托管中心，维护远程库"></a>3.Git和代码托管中心，维护远程库</h2><p>团队内成员参与开发流程</p>
+<p><img src="/images/20200216_git02.png" alt="git02"></p>
+<p>团队外成员参与开发流程</p>
+<p><img src="/images/20200216_git03.png" alt="git03"></p>
+<h2 id="4-Git-常用命令行操作简介"><a href="#4-Git-常用命令行操作简介" class="headerlink" title="4.Git 常用命令行操作简介"></a>4.Git 常用命令行操作简介</h2><h5 id="1-初始化"><a href="#1-初始化" class="headerlink" title="(1)初始化"></a>(1)初始化</h5><p>命令：<strong>git init</strong></p>
+<p>效果：创建.git目录</p>
+<h5 id="2-签名"><a href="#2-签名" class="headerlink" title="(2)签名"></a>(2)签名</h5><p>命令： <strong>git config user.name [Username]</strong></p>
+<p>​            <strong>git config user.email [Email]</strong></p>
+<p>​            <strong>git config –global user.name [Username]</strong></p>
+<p>​            <strong>git config –global user.email [Email]</strong></p>
+<p>效果：设置局部/全局用户签名</p>
+<p>​            这里的用户名和邮箱与外部库（如Github）的用户名和邮箱没有任何关系</p>
+<p>​            局部签名是写在.git目录下的config文件中的</p>
+<h5 id="3-查看状态"><a href="#3-查看状态" class="headerlink" title="(3)查看状态"></a>(3)查看状态</h5><p>命令： <strong>git status</strong></p>
+<p>效果：查看当前状态</p>
+<h5 id="4-add"><a href="#4-add" class="headerlink" title="(4)add"></a>(4)add</h5><p>命令: <strong>git add [filename]</strong></p>
+<p>效果：添加文件名为[filename]的文件到暂存区</p>
+<h5 id="5-rm"><a href="#5-rm" class="headerlink" title="(5)rm"></a>(5)rm</h5><p>命令 :<strong>git rm –cached [filename]</strong></p>
+<p>效果：将文件名为[filename]的文件从暂存区中删除</p>
+<h5 id="6-commit"><a href="#6-commit" class="headerlink" title="(6)commit"></a>(6)commit</h5><p>命令：<strong>git commit -m</strong></p>
+<p>效果：commit到本地库</p>
+<h5 id="7-查看历史记录"><a href="#7-查看历史记录" class="headerlink" title="(7)查看历史记录"></a>(7)查看历史记录</h5><p>命令：  <strong>git log</strong></p>
+<p>​            <strong>git log –pretty=oneline</strong></p>
+<p>​            <strong>git log –oneline</strong></p>
+<p>​            <strong>git reflog</strong></p>
+<p>效果：查看历史记录</p>
+<p>​            reflog哈希值位数小</p>
+<h5 id="8-前进后退方法"><a href="#8-前进后退方法" class="headerlink" title="(8)前进后退方法"></a>(8)前进后退方法</h5><p>命令:<strong>git reset  –hard [索引值，reflog即可]</strong></p>
+<p>​        <strong>git reset –hard HEAD^^^^^^^</strong></p>
+<p>​        <strong>git reset –hard HEAD~[num]</strong></p>
+<p>效果：前进或后退到某一版本</p>
+<p>​            ^和~只能后退不能前进</p>
+<p>​            ^个数表示后退的版本数</p>
+<p>​            ~后边跟数字表示后退的版本数</p>
+<p>参数 –hard 重置本地库、暂存区、工作区</p>
+<p>​        –mixed重置本地库 、暂存区</p>
+<p>​        –soft 仅重置本地库</p>
+<h5 id="9-比较"><a href="#9-比较" class="headerlink" title="(9)比较"></a>(9)比较</h5><p>命令：<strong>git diff [文件名]</strong></p>
+<p>效果：将工作区文件与暂存区文件比较</p>
+<p>命令：<strong>git diff [本地库中历史版本] [文件名]</strong></p>
+<p>效果：将工作区与本地库中的历史版本比较</p>
+<h5 id="10-分支"><a href="#10-分支" class="headerlink" title="(10)分支"></a>(10)分支</h5><p>命令：<strong>git branch -v</strong></p>
+<p>效果：查看分支</p>
+<p>命令 ： <strong>git checkout [分支名]</strong></p>
+<p>效果：切换分支</p>
+<p>命令：<strong>git branch [分支名]</strong></p>
+<p>效果：创建分支</p>
+<p>命令： <strong>git merge [分支名]</strong></p>
+<p>效果：当前分支合并分支名指定分支</p>
+<h2 id="5-Git基本原理简介"><a href="#5-Git基本原理简介" class="headerlink" title="5.Git基本原理简介"></a>5.Git基本原理简介</h2><p>Git 采用的是SHA-1加密算法</p>
+<p>基于指针移动，保证速度</p>
+<p>明文 —&gt;哈希算法—&gt;密文</p>
+<p>哈希算法的特点</p>
+<p>​    不管输入的数据量有多大看，输入同一哈希算法，得到的加密长度相同</p>
+<p>​    哈希算法确定，输入数据确定，输出保持不变</p>
+<p>​    哈希算法确定，输入数据有变化，输出数据一定有变化，而且通常变化很大</p>
+<p>​    哈希算法不可逆</p>
+<h2 id="6-Github"><a href="#6-Github" class="headerlink" title="6.Github"></a>6.Github</h2><h4 id="1-基本操作简介（Https"><a href="#1-基本操作简介（Https" class="headerlink" title="1.基本操作简介（Https)"></a>1.基本操作简介（Https)</h4><p>在本地： <strong>git remote add [origin] [地址]</strong> 用[origin] 替代地址</p>
+<p>克隆： <strong>git clone [地址]</strong> 完整把远程库下载到本地。创建origin远程地址别名。初始化本地库。</p>
+<p>push : <strong>git push [origin]</strong> 将本地库推送至远程库中</p>
+<p>拉取     *<em>git fetch [origin] master *</em> 没有改变本地文件</p>
+<p>​            <strong>git checkout origin/master</strong></p>
+<p>​            <strong>git merge origin/master</strong></p>
+<p>pull： pull = fetch + merge</p>
+<h4 id="2-SSH免密登录"><a href="#2-SSH免密登录" class="headerlink" title="2.SSH免密登录"></a>2.SSH免密登录</h4><p>首先进入家目录</p>
+<p><strong>cd ~</strong></p>
+<p>删除以前创建的ssh</p>
+<p><strong>rm -r .ssh/</strong></p>
+<p>输入</p>
+<p><strong>ssh-keygen -t rsa -C [邮箱]</strong></p>
+<p>输入此命令后后边会有一些确认选项，直接回车即可</p>
+<p>此命令会生成.ssh目录</p>
+<p>进入此目录</p>
+<p><strong>cd .ssh</strong></p>
+<p>里边会有一个id_rsa.pub 文件</p>
+<p><strong>cat id_rsa.pub</strong></p>
+<p>将文件内容复制，登陆GitHub账号，在GitHub网页Personal settings中的左侧栏SSH and GPG keys选项中，选择new SSHkey,在Key一栏中粘贴内容 ,Title 随便写</p>
+<p>ssh配置完成</p>
+<p>接下来，可以复制ssh地址，用以下命令</p>
+<p><strong>git remote add [origin_ssh] [ssh地址]</strong></p>
+<p>就可以使用<strong>git push [origin_ssh]</strong>进行push操作了，不需要输入用户名和密码</p>
+
+        
+      </div>
+    </div>
+
+  
+
+  
+  
     
   
 
